@@ -1,9 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_c"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityC">
+    android:padding="8dp"
+    android:background="@color/dark_red"
+    android:orientation="vertical"
+    tools:context="br.usjt.sin.progmulti.atividadessi2018.MainActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Atividade C"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/font_large"
+        android:textColor="@color/light_red"
+        android:paddingBottom="16dp"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btn_start_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Iniciar A"
+            android:onClick="startActivityA"/>
+
+        <Button
+            android:id="@+id/btn_start_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btn_start_a"
+            android:onClick="startActivityB"
+            android:text="Iniciar B" />
+
+        <Button
+            android:id="@+id/btn_finish_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/btn_start_dialog"
+            android:onClick="finishActivityC"
+            android:text="Terminar C" />
+
+        <Button
+            android:id="@+id/btn_start_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:onClick="startDialog"
+            android:text="Diálogo" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_medium"
+        android:text="@string/lifecycle_method_list"
+        android:textColor="@color/light_red" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+        <TextView
+            android:id="@+id/status_view_a"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:padding="4dp"
+            android:typeface="monospace"/>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_medium"
+        android:text="@string/activity_status"
+        android:textColor="@color/light_red" />
+    <TextView
+        android:id="@+id/status_view_all_a"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:padding="4dp"
+        android:typeface="monospace"/>
+</LinearLayout>
