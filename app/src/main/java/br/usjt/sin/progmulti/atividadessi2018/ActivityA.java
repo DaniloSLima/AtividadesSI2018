@@ -25,10 +25,9 @@ import android.widget.TextView;
 import br.usjt.sin.progmulti.atividadessi2018.util.StatusTracker;
 import br.usjt.sin.progmulti.atividadessi2018.util.Utils;
 
-/**
- * Example Activity to demonstrate the lifecycle callback methods.
+/**Example Activity to demonstrate the lifecycle callback methods.
+ * Danilo de Souza Lima RA:816114969
  */
-
 public class ActivityA extends Activity {
 
     private String mActivityName;
@@ -36,6 +35,9 @@ public class ActivityA extends Activity {
     private TextView mStatusAllView;
     private StatusTracker mStatusTracker = StatusTracker.getInstance();
 
+    /**Método OnCreate é usado para configurar a interface.
+     * Danilo de Souza Lima RA:816114969
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +49,9 @@ public class ActivityA extends Activity {
         Utils.printStatus(mStatusView, mStatusAllView);
     }
 
+    /**O método onStart é executado depois de a Activity ter sido enviada para o segundo plano.
+     * Danilo de Souza Lima RA:816114969
+     */
     @Override
     protected void onStart() {
         super.onStart();
@@ -54,6 +59,9 @@ public class ActivityA extends Activity {
         Utils.printStatus(mStatusView, mStatusAllView);
     }
 
+    /**O método onRestart é chamado depois que atividade tiver sido interrompida, logo antes de ser reiniciada.
+     * Danilo de Souza Lima RA:816114969
+     */
     @Override
     protected void onRestart() {
         super.onRestart();
@@ -61,6 +69,9 @@ public class ActivityA extends Activity {
         Utils.printStatus(mStatusView, mStatusAllView);
     }
 
+    /**O método onResume é acionado quando a Activity se inicia e quando é reiniciada.
+     * Danilo de Souza Lima RA:816114969
+     */
     @Override
     protected void onResume() {
         super.onResume();
@@ -68,6 +79,9 @@ public class ActivityA extends Activity {
         Utils.printStatus(mStatusView, mStatusAllView);
     }
 
+    /**O método onPause é acionado, quando a Activity deixa o primeiro plano.
+     * Danilo de Souza Lima RA:816114969
+     */
     @Override
     protected void onPause() {
         super.onPause();
@@ -75,12 +89,18 @@ public class ActivityA extends Activity {
         Utils.printStatus(mStatusView, mStatusAllView);
     }
 
+    /**O método onStop é chamado quando a Activity não está mais visível para o usuário..
+     * Danilo de Souza Lima RA:816114969
+     */
     @Override
     protected void onStop() {
         super.onStop();
         mStatusTracker.setStatus(mActivityName, getString(R.string.on_stop));
     }
 
+    /**O método onDestroy é chamado quando a Activity vai ser destruida
+     * Danilo de Souza Lima RA:816114969
+     */
     @Override
     protected void onDestroy() {
         super.onDestroy();

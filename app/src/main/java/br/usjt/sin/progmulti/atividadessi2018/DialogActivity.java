@@ -22,6 +22,10 @@ import android.view.View;
 import android.view.Window;
 
 public class DialogActivity extends Activity {
+
+    /**Método OnCreate é usado para configurar a interface.
+     * Danilo de Souza Lima RA:816114969
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,9 +33,8 @@ public class DialogActivity extends Activity {
         setContentView(R.layout.activity_dialog);
     }
 
-    /**
-     * Callback method defined by the View
-     * @param v
+    /**Callback method defined by the View
+     * Danilo de Souza Lima RA:816114969
      */
     public void finishDialog(View v) {
         DialogActivity.this.finish();
